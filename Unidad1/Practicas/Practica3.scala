@@ -1,3 +1,71 @@
+//1
+def listEvens(list:List[Int]): String ={
+    for(n <- list){
+        if(n%2==0){
+            println(s"$n is even")
+        }else{
+            println(s"$n is odd")
+        }
+    }
+    return "Done"
+}
+val l = List(1,2,3,4,5,6,7,8)
+val l2 = List(4,3,22,55,7,8)
+listEvens(l)
+listEvens(l2)
+/***
+1.Se declara una Lista llamada listEvens conformada por Enteros y retornara un String.
+2.En un ciclo for mientras el valor este menor a la lista 
+3.Si el residuo de N es igual  a 0 se imprimira que el numero de la lista es par
+4.Si el residuo de N es diferente a 0 se imprimira que el numero de la lista es imprimira
+5.Se retorna la respuesta
+
+Pseudocodigo
+listEvens(list)
+    Por cada n desde 0 hasta el largo de list.
+        si (n%2 es igual a 0)
+            imprime (n,"es par")
+        Si no 
+            imprime (n,"es Impar")
+        Fin Condicion
+    Fin ciclo
+regresa respuesta     
+***/        
+            
+//2
+def afortunado(list:List[Int]): Int={
+    var res=0
+    for(n <- list){
+        if(n==7){
+            res = res + 14
+        }else{
+            res = res + n
+        }
+    }
+    return res
+}
+val af= List(1,7,7)
+println(afortunado(af))
+/***
+1.Se declara una Lista llamada afortunado conformada por Enteros al igual que su retorno
+2.se genera una variable llamada res asignandole una valor inicial de 0
+3.En un cilo for mientras el valor de n sea menor que la lista
+4.Si n es igual a 7 esta imprimira el valor que de la operacion de res+14
+4.Si no imprimira el valor de res+n
+5.Retorna el res
+
+Pseudocodigo
+afortunado(list)
+        Por cada n desde 0 hasta el largo de list.
+            si (n=7)
+                imprime el resultado de res+14
+            Si no 
+                imprime el resultad de res+n
+            Fin Condicion
+        Fin ciclo
+    regresa res
+***/
+
 //3
 def balance(list:List[Int]): Boolean={
     var primera = 0
