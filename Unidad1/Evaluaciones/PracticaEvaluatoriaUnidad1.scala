@@ -53,9 +53,9 @@ val time2 = time1*.100
 df.select(corr($"High", $"Volume")).show()
 
 //d. ¿Cuál es el máximo de la columna “High” por año? 
-val df2 = df.withColumn("Year", year(df("Date")))
-val dfmaxyear = df2.groupBy("Year").max()
-dfmaxyear.select($"Year", $"max(High)").show()
+val perTiem=df.filter($"High">500).count()
+val totalR=df.count
+val percen = (perTiem*1.0)/(totalR*100)
 
 //e. ¿Cuál es el promedio de columna “Close” para cada mes del calendario? 
 val monthdf = df.withColumn("Month",month(df("Date")))
