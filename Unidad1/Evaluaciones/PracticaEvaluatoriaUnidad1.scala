@@ -46,17 +46,17 @@ df.select(min("Volume")).show()
 df.filter($"Close"<600).count()
 
 //b. ¿Qué porcentaje del tiempo fue la columna “High” mayor que $ 500? 
-val time1 = (df.filter($"High">500).count()*1.0/df.count())*100
-val time2 = time1*.100
+val perTiem=df.filter($"High">500).count()
+val totalR=df.count
+val percen = (perTiem*1.0)/(totalR*100)
 
 //c. ¿Cuál es la correlación de Pearson entre columna “High” y la columna “Volumen”? 
 df.select(corr($"High", $"Volume")).show()
 
 //d. ¿Cuál es el máximo de la columna “High” por año? 
-val perTiem=df.filter($"High">500).count()
-val totalR=df.count
-val percen = (perTiem*1.0)/(totalR*100)
-
+val df2 = df.withColumn("Year", year(df("Date")))
+val dfmaxyear = df2.groupBy("Year").max()
+dfmaxyear.select($"Year", $"max(High)").show()
 //e. ¿Cuál es el promedio de columna “Close” para cada mes del calendario? 
 val monthdf = df.withColumn("Month",month(df("Date")))
 val monthavgs = monthdf.select($"Month",$"Close").groupBy("Month").mean()
