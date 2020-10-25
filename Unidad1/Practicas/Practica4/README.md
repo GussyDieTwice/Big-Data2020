@@ -82,7 +82,7 @@ def fib5 (n:Int): Int = {
 }
 ```
 
-Algotimo 6 Divide and Conquer Version
+Algorithm 6 Divide and Conquer Version
 ```scala
 import scala.math.pow
 def fibo(n :Double):Double={
