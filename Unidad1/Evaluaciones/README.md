@@ -5,7 +5,7 @@ In the matter of big data, the students were asked to carry out an evaluative pr
 
 The exercises were the following:
 
-1. Start a simple Spark session.
+**1. Start a simple Spark session.**
 Solution:
 ```scala
 import org.apache.spark.sql.SparkSession
@@ -24,7 +24,7 @@ import spark.implicits._
 spark: org.apache.spark.sql.SparkSession = org.apache.spark.sql.SparkSession@5b9ca528
 ```
 
-2. Upload Netflix Stock CSV file, have Spark infer data types.
+**2. Upload Netflix Stock CSV file, have Spark infer data types.**
 Solution:
 ```scala
 val df = spark.read.option("header", "true").option("inferSchema","true")csv("/home/gussy/git_workspace/Big-Data2020/Unidad1/Evaluaciones/Netflix_2011_2016.csv")
@@ -37,7 +37,7 @@ Result:
 df: org.apache.spark.sql.DataFrame = [Date: timestamp, Open: double ... 5 more fields]
 ```
 
-3. What are the names of the columns?
+**3. What are the names of the columns?**
 Solution:
 ```scala
 df.columns
@@ -49,7 +49,7 @@ Result:
 res0: Array[String] = Array(Date, Open, High, Low, Close, Volume, Adj Close)
 ```
 
-4. What is the scheme like?
+**4. What is the scheme like?**
 Solution:
 ```scala
 df.printSchema()
@@ -67,7 +67,7 @@ Result:
  |-- Adj Close: double (nullable = true)
  ```
  
- 5. Print the first 5 columns.
+ **5. Print the first 5 columns.**
 Solution:
 ```scala
 df.head(5)
@@ -79,7 +79,7 @@ Result:
 res1: Array[org.apache.spark.sql.Row] = Array([2011-10-24 00:00:00.0,119.100002,120.28000300000001,115.100004,118.839996,120460200,16.977142], [2011-10-25 00:00:00.0,74.899999,79.390001,74.249997,77.370002,315541800,11.052857000000001], [2011-10-26 00:00:00.0,78.73,81.420001,75.399997,79.400002,148733900,11.342857], [2011-10-27 00:00:00.0,82.179998,82.71999699999999,79.249998,80.86000200000001,71190000,11.551428999999999], [2011-10-28 00:00:00.0,80.280002,84.660002,79.599999,84.14000300000001,57769600,12.02])
 ```
 
-6. Use describe () to learn about the DataFrame.
+**6. Use describe () to learn about the DataFrame.**
 Solution:
 ```scala
 df.describe().show()
@@ -99,7 +99,7 @@ Result:
 +-------+------------------+------------------+------------------+------------------+--------------------+------------------+
 ```
 
-7. Create a new dataframe with a new column called “HV Ratio” which is the relationship between the price in the “High” column versus the “Volume” column of shares traded for a day. (Hint: It is a column operation).
+**7. Create a new dataframe with a new column called “HV Ratio” which is the relationship between the price in the “High” column versus the “Volume” column of shares traded for a day. (Hint: It is a column operation).**
 Solution:
 ```scala
 val hvRatio=df.withColumn("HV Ratio", df("High")/df("Volume"))
@@ -134,7 +134,7 @@ Result:
 +-------------------+-----------------+------------------+----------+-----------------+---------+------------------+--------------------+
 ```
 
-8. Which day had the highest peak in the “Close” column?
+**8. Which day had the highest peak in the “Close” column?**
 Solution:
 ```scala
 df.groupBy(dayofweek(df("Date")).alias("Day")).max("Close").sort(asc("Day")).show()
@@ -154,14 +154,14 @@ Result:
 +---+-----------------+
 ```
 
-9. Write in your own words in a comment of your code. What is the meaning of the Close column "Close"?
+**9. Write in your own words in a comment of your code. What is the meaning of the Close column "Close"?**
 Solution:
 ```scala
 //It is the Total of the values ​​with which they closed that date 
 ```
 In the stock market, "Close" is the term used for the security at which it was closed that day.
 
-10. What is the maximum and minimum of the “Volume” column?
+**10. What is the maximum and minimum of the “Volume” column?**
 Solution:
 ```scala
 df.select(max("Volume"), min("Volume")).show() 
@@ -177,10 +177,10 @@ Result:
 +-----------+-----------+
 ```
 
-11.With Scala / Spark $ Syntax answer the following:
-Hint: Basically very similar to the dates session, you will have to create another dataframe to answer some of the items.
+**11.With Scala / Spark $ Syntax answer the following:
+Hint: Basically very similar to the dates session, you will have to create another dataframe to answer some of the items.**
 
-a. How many days was the “Close” column less than $ 600?
+**a. How many days was the “Close” column less than $ 600?**
 Solution:
 ```scala
 df.filter($"Close"<600).count()
@@ -192,7 +192,7 @@ Result:
 res6: Long = 1218
 ```
 
-b. What percentage of the time was the “High” column greater than $ 500?
+**b. What percentage of the time was the “High” column greater than $ 500?**
 Solution:
 ```scala
 val perTiem = df.filter($"High">500).count()
@@ -208,7 +208,7 @@ Result:
 percen: Double = 4.924543288324066E-4
 ```
 
-c. What is the Pearson correlation between column "High" and column "Volume"?
+**c. What is the Pearson correlation between column "High" and column "Volume"?**
 Solution:
 ```scala
 df.select(corr($"High", $"Volume")).show()
@@ -224,7 +224,7 @@ Result:
 +--------------------+
 ```
 
-d. ¿Cuál es el máximo de la columna “High” por año? 
+**d. ¿Cuál es el máximo de la columna “High” por año?**
 Solución: 
 ```scala
 val df2 = df.withColumn("Year", year(df("Date")))
@@ -249,7 +249,7 @@ Result:
 +----+------------------+
 ```
 
-e. What is the “Close” column average for each calendar month?
+**e. What is the “Close” column average for each calendar month?**
 Solution:
 ```scala
 val monthdf = df.withColumn("Month",month(df("Date")))
@@ -286,4 +286,9 @@ For Big Data, it is necessary to know how to manipulate these dataframes with th
 
 In conclusion, it can be said that the evaluative practice was not complicated, but it was necessary to investigate some functions or methods to be able to solve some points that were requested, the way to make the clearest and most accurate solutions possible was sought, while investigating realizes that scala offers us too many tools for the solution or extraction of information required on a DataFrame, also with the knowledge had about other languages ​​and the syntax that dealt with SQL, it was helpful to find if it could be done in scala, and Seeing that it is similar made it easier for us to resolve the work.
 
+### Youtube video.
+https://www.youtube.com/watch?v=w-Jjw3dQIoo&feature=youtu.be
 
+## Sources.
+1. https://spark.apache.org/docs/2.4.7/sql-getting-started.html
+2. https://spark.apache.org/docs/2.4.7/api/scala/index.html#org.apache.spark.sql.Dataset  
