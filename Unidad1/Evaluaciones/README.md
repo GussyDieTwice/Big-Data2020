@@ -157,16 +157,16 @@ Result:
 9. Write in your own words in a comment of your code. What is the meaning of the Close column "Close"?
 Solution:
 ```scala
-//Es el Total de los valores con los que cerraron esa fecha 
+//It is the Total of the values ​​with which they closed that date 
 ```
-En la bolsa de valores, “Close” es el término que se utiliza para el valor en el que se cerró ese día.
+In the stock market, "Close" is the term used for the security at which it was closed that day.
 
 10. What is the maximum and minimum of the “Volume” column?
 Solution:
 ```scala
 df.select(max("Volume"), min("Volume")).show() 
 ```
-En este ejercicio se utilizó la operación select() y en el solo mandamos a llamar el valor máximo y el valor mínimo de la columna Volume para al último desplegarlo con la operación .show()
+In this exercise the select () operation was used and in it we only sent to call the maximum value and the minimum value of the Volume column to display it last with the .show () operation
 
 Result:
 ```
