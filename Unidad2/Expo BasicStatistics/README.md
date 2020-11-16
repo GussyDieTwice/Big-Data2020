@@ -105,6 +105,23 @@ object ChiSquareTestExample {
 ```
 
 ## Summerizer.
+### Resumen de estadísticas
+Estadística de resumen de columnas vectoriales
+## Uso 
+ *La Tabla de salida constará de campos que contienen el resultado de la operación estadística.
+ *Con esta herramienta están disponibles las siguientes operaciones estadísticas: suma, valor medio, máximo, mínimo, rango, desviación estándar, recuento, primero y último.
+ *Los valores nulos se excluyen de todos los cálculos estadísticos
+ ## Metricas 
+*SUM: Agrega el valor total para el campo especificado.
+*MEAN: Calcula el promedio para el campo especificado.
+*MIN: Busca el valor más pequeño para todos los registros del campo especificado.
+*MAX: Busca el valor más grande para todos los registros del campo especificado.
+*STD: Busca la desviación estándar de los valores en el campo especificado.
+*Varianza: Busca la varianza entre ambos valores 
+Metricas Extras 
+*COUNT: Busca la cantidad de valores incluidos en los cálculos estadísticos. Esto cuenta todos los valores excepto los valores nulos.
+*FIRST: Busca el primer registro de la entrada y utiliza el valor de campo especificado.
+*LAST: Busca el último registro de la entrada y utiliza el valor de campo especificado.
 
 ### Programa Ejemplo.
 ```scala
