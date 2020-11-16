@@ -2,8 +2,34 @@
 
 ## Correlation (Correlacion).
 ### Correlacion de Pearson.
+El coeficiente de correlación de Pearson es una prueba que mide la relación estadística entre dos variables continuas. Si la asociación entre los elementos no es lineal, entonces el coeficiente no se encuentra representado adecuadamente.
+
+El coeficiente de correlación puede tomar un rango de valores de +1 a -1. Un valor de 0 indica que no hay asociación entre las dos variables. Un valor mayor que 0 indica una asociación positiva. Es decir, a medida que aumenta el valor de una variable, también lo hace el valor de la otra. Un valor menor que 0 indica una asociación negativa; es decir, a medida que aumenta el valor de una variable, el valor de la otra disminuye.
+
+¿Cómo se calcula el coeficiente de correlación de Pearson?
+La fórmula del coeficiente de correlación de Pearson es la siguiente:
+![Pearson Formula](https://www.webyempresas.com/wp-content/uploads/2018/05/formula.jpg)
+Donde:
+“x” es igual a la variable número uno, “y” pertenece a la variable número dos, “Zx” es la desviación estándar de la variable uno, “Zy” es la desviación estándar de la variable dos y “N” es es número de datos.
+![Desviacion Estandar Formula](https://economipedia.com/wp-content/uploads/Formula-Desviacion-Tipica.jpg)
+
+Ventajas y desventajas del coeficiente de correlación de Pearson.
+Entre las principales ventajas del coeficiente de correlación de Karl Pearson se encuentran:
+
+*El valor es independiente de cualquier unidad que se utiliza para medir las variables.
+*Si la muestra es grande, es más probable la exactitud de la estimación.
+
+Alguna de las desventajas del coeficiente de correlación son:
+
+*Es necesario las dos variables sean medidas a un nivel cuantitativo continuo.
+*La distribución de las variables deben ser semejantes a la curva normal.
 
 ### Correlacion de Spearman.
+El coeficiente de correlación de Spearman es una medida no paramétrica de la correlación de rango (dependencia estadística del ranking entre dos variables). Se utiliza principalmente para el análisis de datos.
+
+(Las pruebas no paramétricas son aquellas que se encargan de analizar datos que no tienen una distribución particular y se basan una hipótesis, pero los datos no están organizados de forma normal. Aunque tienen algunas limitaciones, cuentan con resultados estadísticos ordenados que facilita su comprensión.)
+
+Mide la fuerza y la dirección de la asociación entre dos variables clasificadas. Pero antes de hablar de la correlación de Spearman, es importante entender la correlación de Pearson, la cual es una medida estadística de la fuerza de una relación lineal entre datos emparejados.
 
 ### Matriz de Correlacion.
 
@@ -41,7 +67,7 @@ object CorrelationExample {
   }
 }
 ```
-## Hypotesis Testing. 
+## Hypothesis Testing. 
 
 ### Programa Ejemplo.
 ```scala
@@ -119,3 +145,5 @@ object SummarizerExample {
   }
 }
 ```
+### Fuentes.
+https://www.questionpro.com/blog/es/coeficiente-de-correlacion-de-pearson/
