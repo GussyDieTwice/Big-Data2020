@@ -219,3 +219,7 @@ object SummarizerExample {
 ### Fuentes.
 https://www.questionpro.com/blog/es/coeficiente-de-correlacion-de-pearson/
 https://www.uv.es/webgid/Descriptiva/31_coeficiente_de_pearson.html 
+https://www.investopedia.com/terms/h/hypothesistesting.asp
+https://www.statisticshowto.com/probability-and-statistics/hypothesis-testing/?fbclid=IwAR1Lk1PU64bshZdMFep_LjFhUCzjtHfV3AuKTgGQnleXcXrB-mqOykzbTWQ
+https://desktop.arcgis.com/es/arcmap/latest/tools/analysis-toolbox/summary-statistics.htm
+https://spark.apache.org/docs/2.4.7/ml-statistics.html#summarizer
