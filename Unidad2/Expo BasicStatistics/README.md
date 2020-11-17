@@ -126,7 +126,7 @@ Todas las hipótesis se prueban mediante un proceso de cuatro pasos:
 ### Hipotesis Nula 
 ### ¿Qué es una hipótesis nula?
 Una hipótesis nula es un tipo de hipótesis utilizada en estadística que propone que no existe diferencia entre determinadas características de una población (o proceso de generación de datos).
-### Conlusiones Claves 
+### Conclusiones Claves 
 * Una hipótesis nula es un tipo de conjetura utilizada en estadística que propone que no existe diferencia entre ciertas características de una población o proceso de generación de datos.
 * La hipótesis alternativa propone que hay una diferencia.
 * La prueba de hipótesis proporciona un método para rechazar una hipótesis nula dentro de un cierto nivel de confianza. (Sin embargo, las hipótesis nulas no se pueden probar).
