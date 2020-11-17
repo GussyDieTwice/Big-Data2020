@@ -108,7 +108,21 @@ object CorrelationExample {
 }
 ```
 ## Hypothesis Testing. 
-
+### ¿Qué es la prueba de hipótesis?
+La prueba de hipótesis es un acto en estadística mediante el cual un analista prueba 
+una suposición con respecto a un parámetro de población. La metodología empleada por el analista 
+depende de la naturaleza de los datos utilizados y el motivo del análisis.
+### Objetivo 
+* El objetivo principal de la estadística es probar una hipótesis.
+* La prueba de hipótesis se utiliza para evaluar la plausibilidad de una hipótesis utilizando datos de muestra.
+* La prueba proporciona evidencia sobre la plausibilidad de la hipótesis, dados los datos.
+* Los analistas estadísticos prueban una hipótesis midiendo y examinando una muestra aleatoria de la población que se analiza.
+### Pasos para crear la Hipostesis 
+Todas las hipótesis se prueban mediante un proceso de cuatro pasos:
+* El primer paso es que el analista enuncie las dos hipótesis de modo que solo una pueda ser correcta.
+* El siguiente paso es formular un plan de análisis, que describe cómo se evaluarán los datos.
+* El tercer paso es llevar a cabo el plan y analizar físicamente los datos de la muestra.
+* El cuarto y último paso es analizar los resultados y rechazar la hipótesis nula o afirmar que la hipótesis nula es plausible, dados los datos.
 ### Programa Ejemplo.
 ```scala
 import org.apache.spark.ml.linalg.{Vector, Vectors}
