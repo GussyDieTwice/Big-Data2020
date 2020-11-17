@@ -123,6 +123,13 @@ Todas las hipótesis se prueban mediante un proceso de cuatro pasos:
 * El siguiente paso es formular un plan de análisis, que describe cómo se evaluarán los datos.
 * El tercer paso es llevar a cabo el plan y analizar físicamente los datos de la muestra.
 * El cuarto y último paso es analizar los resultados y rechazar la hipótesis nula o afirmar que la hipótesis nula es plausible, dados los datos.
+### Hipotesis Nula 
+### ¿Qué es una hipótesis nula?
+Una hipótesis nula es un tipo de hipótesis utilizada en estadística que propone que no existe diferencia entre determinadas características de una población (o proceso de generación de datos).
+### Conlusiones Claves 
+* Una hipótesis nula es un tipo de conjetura utilizada en estadística que propone que no existe diferencia entre ciertas características de una población o proceso de generación de datos.
+* La hipótesis alternativa propone que hay una diferencia.
+* La prueba de hipótesis proporciona un método para rechazar una hipótesis nula dentro de un cierto nivel de confianza. (Sin embargo, las hipótesis nulas no se pueden probar).
 ### Programa Ejemplo.
 ```scala
 import org.apache.spark.ml.linalg.{Vector, Vectors}
@@ -217,9 +224,12 @@ object SummarizerExample {
 }
 ```
 ### Fuentes.
-https://www.questionpro.com/blog/es/coeficiente-de-correlacion-de-pearson/
-https://www.uv.es/webgid/Descriptiva/31_coeficiente_de_pearson.html 
-https://www.investopedia.com/terms/h/hypothesistesting.asp
-https://www.statisticshowto.com/probability-and-statistics/hypothesis-testing/?fbclid=IwAR1Lk1PU64bshZdMFep_LjFhUCzjtHfV3AuKTgGQnleXcXrB-mqOykzbTWQ
-https://desktop.arcgis.com/es/arcmap/latest/tools/analysis-toolbox/summary-statistics.htm
-https://spark.apache.org/docs/2.4.7/ml-statistics.html#summarizer
+* https://www.questionpro.com/blog/es/coeficiente-de-correlacion-de-pearson/
+* https://www.uv.es/webgid/Descriptiva/31_coeficiente_de_pearson.html 
+* https://www.investopedia.com/terms/h/hypothesistesting.asp
+* https://www.statisticshowto.com/probability-and-statistics/hypothesis-testing/?fbclid=IwAR1Lk1PU64bshZdMFep_LjFhUCzjtHfV3AuKTgGQnleXcXrB-mqOykzbTWQ
+* https://desktop.arcgis.com/es/arcmap/latest/tools/analysis-toolbox/summary-statistics.html
+* https://spark.apache.org/docs/2.4.7/ml-statistics.html#summarizer
+* https://www.investopedia.com/terms/n/null_hypothesis.asp
+### Video de Apoyo
+* https://www.youtube.com/watch?v=V4SRgabFbz0&list=LL&index=2&t=93s&fbclid=IwAR04LN57q9hehBDwgVhQanmiEhyykaWG--ld7f3IsBz6jTyAa6Tvb1JZcVQ
