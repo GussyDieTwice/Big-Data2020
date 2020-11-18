@@ -80,6 +80,9 @@ Es una matriz de coeficientes de correlacion entre varias variables cuantitativa
 
 ![EjemploMatriz](https://i.ytimg.com/vi/LJ6SX7PBreg/maxresdefault.jpg)
 
+### Objetivo
+La finalidad de la correlación es examinar la dirección y la fuerza de la asociación entre dos variables cuantitativas. Así conoceremos la intensidad de la relación entre ellas y si, al aumentar el valor de una variable, aumenta o disminuye el valor de la otra variable.
+
 ### Programa Ejemplo.
 ```scala
 import org.apache.spark.ml.linalg.{Matrix, Vectors}
