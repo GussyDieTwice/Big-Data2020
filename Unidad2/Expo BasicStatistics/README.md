@@ -14,6 +14,7 @@ Donde:
 ![Desviacion Estandar Formula](https://economipedia.com/wp-content/uploads/Formula-Desviacion-Tipica.jpg)
 
 **Ejemplo.**
+
 ![Paso1](https://www.uv.es/webgid/Descriptiva/Img11.jpg)
 
 ![Paso2](https://www.uv.es/webgid/Descriptiva/Img12.jpg)
@@ -30,7 +31,9 @@ Mide la fuerza y la dirección de la asociación entre dos variables clasificada
 
 
 **¿Cómo calcular el coeficiente de correlación de Spearman?**
+
 ![Formula Spearman](https://www.questionpro.com/blog/wp-content/uploads/2019/02/2.png)
+
 n= número de puntos de datos de las dos variables
 
 di= diferencia de rango del elemento “n”
@@ -72,6 +75,9 @@ Debemos ser capaces de clasificar los datos antes de proceder con el coeficiente
 El coeficiente de correlación de Spearman para estos datos es de 0.9 y como se mencionó anteriormente si el valor de ⍴ se acerca a +1 entonces tienen una asociación perfecta de rango.
 
 ### Matriz de Correlacion.
+Es una matriz de coeficientes de correlacion entre varias variables cuantitativas.
+
+![EjemploMatriz](https://i.ytimg.com/vi/LJ6SX7PBreg/maxresdefault.jpg}
 
 ### Programa Ejemplo.
 ```scala
