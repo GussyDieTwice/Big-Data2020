@@ -8,9 +8,12 @@ El coeficiente de correlación puede tomar un rango de valores de +1 a -1. Un va
 
 **¿Cómo se calcula el coeficiente de correlación de Pearson?**
 La fórmula del coeficiente de correlación de Pearson es la siguiente:
+
 ![Pearson Formula](https://www.webyempresas.com/wp-content/uploads/2018/05/formula.jpg)
+
 Donde:
 “x” es igual a la variable número uno, “y” pertenece a la variable número dos, “Zx” es la desviación estándar de la variable uno, “Zy” es la desviación estándar de la variable dos y “N” es es número de datos.
+
 ![Desviacion Estandar Formula](https://economipedia.com/wp-content/uploads/Formula-Desviacion-Tipica.jpg)
 
 **Ejemplo.**
@@ -27,8 +30,6 @@ El coeficiente de correlación de Spearman es una medida no paramétrica de la c
 (Las pruebas no paramétricas son aquellas que se encargan de analizar datos que no tienen una distribución particular y se basan una hipótesis, pero los datos no están organizados de forma normal. Aunque tienen algunas limitaciones, cuentan con resultados estadísticos ordenados que facilita su comprensión.)
 
 Mide la fuerza y la dirección de la asociación entre dos variables clasificadas. Pero antes de hablar de la correlación de Spearman, es importante entender la correlación de Pearson, la cual es una medida estadística de la fuerza de una relación lineal entre datos emparejados.
-
-
 
 **¿Cómo calcular el coeficiente de correlación de Spearman?**
 
@@ -77,7 +78,7 @@ El coeficiente de correlación de Spearman para estos datos es de 0.9 y como se 
 ### Matriz de Correlacion.
 Es una matriz de coeficientes de correlacion entre varias variables cuantitativas.
 
-![EjemploMatriz](https://i.ytimg.com/vi/LJ6SX7PBreg/maxresdefault.jpg}
+![EjemploMatriz](https://i.ytimg.com/vi/LJ6SX7PBreg/maxresdefault.jpg)
 
 ### Programa Ejemplo.
 ```scala
