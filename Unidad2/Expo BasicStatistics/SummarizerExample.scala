@@ -16,7 +16,7 @@
  */
 
 // scalastyle:off println
-package org.apache.spark.examples.ml
+//package org.apache.spark.examples.ml
 
 // $example on$
 import org.apache.spark.ml.linalg.{Vector, Vectors}
