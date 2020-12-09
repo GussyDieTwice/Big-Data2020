@@ -27,7 +27,7 @@ object NaiveBayesExample {
       .setLabelCol("label")
       .setPredictionCol("prediction")
       .setMetricName("accuracy")
-//Crear un valor "accuracy" que calculara el Error de las prueas
+//Crear un valor "accuracy" que calculara el Error de las pruebas
     val accuracy = evaluator.evaluate(predictions)
     println(s"Test set accuracy = $accuracy")
 
