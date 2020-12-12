@@ -10,10 +10,15 @@ object Evaluacion2 {
     val spark = SparkSession.builder.appName("Evaluacion2").getOrCreate()
 
     val df = spark.read.option("header", "true").option("inferSchema","true")csv("/home/gussy/git_workspace/Big-Data2020/Unidad2/Evaluacion/iris.csv")
+    val df = spark.read.option("header", "true").option("inferSchema","true")csv("C:/Data2020/Big-Data2020/Unidad2/Evaluacion/iris.csv")
 
+    val datos = df.columns
     df.columns
+    val esquema = df.printSchema
     df.printSchema
+    val imp = df.head(5)
     df.head(5)
+    val desc = df.describe().show()
     df.describe().show() 
 
     val indexer = new StringIndexer().setInputCol("species").setOutputCol("indexedSpecies").fit(df)
