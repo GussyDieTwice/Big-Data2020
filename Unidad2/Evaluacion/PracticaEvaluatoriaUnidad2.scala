@@ -1,5 +1,4 @@
 //Importar las Librerias a utilizar
-
 import org.apache.spark.ml.classification.MultilayerPerceptronClassifier
 import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
 import org.apache.spark.sql.SparkSession
@@ -13,7 +12,7 @@ object Evaluacion2 {
    
     //1. Cargar en un dataframe Iris.csv 
     val df = spark.read.option("header", "true").option("inferSchema","true")csv("/home/gussy/git_workspace/Big-Data2020/Unidad2/Evaluacion/iris.csv")
-    val df = spark.read.option("header", "true").option("inferSchema","true")csv("C:/Data2020/Big-Data2020/Unidad2/Evaluacion/iris.csv")
+    //val df = spark.read.option("header", "true").option("inferSchema","true")csv("C:/Data2020/Big-Data2020/Unidad2/Evaluacion/iris.csv")
    
     //2.¿Cuáles son los nombres de las columnas?
     val datos = df.columns
@@ -55,62 +54,13 @@ object Evaluacion2 {
     // En el valor indexed hacemos las tranformacion del DF eliminando Species por la nueva columna "label"
     val indexed = indexer.transform(df).drop("species").withColumnRenamed("indexedLabel", "label")
     indexed.show()
-    /*
-        *+------------+-----------+------------+-----------+-----+
-        |sepal_length|sepal_width|petal_length|petal_width|label|
-        +------------+-----------+------------+-----------+-----+
-        |         5.1|        3.5|         1.4|        0.2|  2.0|
-        |         4.9|        3.0|         1.4|        0.2|  2.0|
-        |         4.7|        3.2|         1.3|        0.2|  2.0|
-        |         4.6|        3.1|         1.5|        0.2|  2.0|
-        |         5.0|        3.6|         1.4|        0.2|  2.0|
-        |         5.4|        3.9|         1.7|        0.4|  2.0|
-        |         4.6|        3.4|         1.4|        0.3|  2.0|
-        |         5.0|        3.4|         1.5|        0.2|  2.0|
-        |         4.4|        2.9|         1.4|        0.2|  2.0|
-        |         4.9|        3.1|         1.5|        0.1|  2.0|
-        |         5.4|        3.7|         1.5|        0.2|  2.0|
-        |         4.8|        3.4|         1.6|        0.2|  2.0|
-        |         4.8|        3.0|         1.4|        0.1|  2.0|
-        |         4.3|        3.0|         1.1|        0.1|  2.0|
-        |         5.8|        4.0|         1.2|        0.2|  2.0|
-        |         5.7|        4.4|         1.5|        0.4|  2.0|
-        |         5.4|        3.9|         1.3|        0.4|  2.0|
-        |         5.1|        3.5|         1.4|        0.3|  2.0|
-        |         5.7|        3.8|         1.7|        0.3|  2.0|
-        |         5.1|        3.8|         1.5|        0.3|  2.0|
-        +------------+-----------+------------+-----------+-----+ */
-      //El valor assembler es para ensamblar el vector con las columnas sepal_length,sepal_width,pedal_length,pedal_width
-      // en una column nueva llamada feature
+    
+    //El valor assembler es para ensamblar el vector con las columnas sepal_length,sepal_width,pedal_length,pedal_width
+    // en una column nueva llamada feature
     val assembler = new VectorAssembler().setInputCols(Array("sepal_length","sepal_width","petal_length","petal_width")).setOutputCol("features")
       // En el valor data, llamamos  a nuestro valor assembler y hacemos la transformacion , con nuestro valor creado anterior indexed
     val data = assembler.transform(indexed)
     data.show()
-    /*     
-      +------------+-----------+------------+-----------+-----+-----------------+
-      |sepal_length|sepal_width|petal_length|petal_width|label|         features|
-      +------------+-----------+------------+-----------+-----+-----------------+
-      |         5.1|        3.5|         1.4|        0.2|  2.0|[5.1,3.5,1.4,0.2]|
-      |         4.9|        3.0|         1.4|        0.2|  2.0|[4.9,3.0,1.4,0.2]|
-      |         4.7|        3.2|         1.3|        0.2|  2.0|[4.7,3.2,1.3,0.2]|
-      |         4.6|        3.1|         1.5|        0.2|  2.0|[4.6,3.1,1.5,0.2]|
-      |         5.0|        3.6|         1.4|        0.2|  2.0|[5.0,3.6,1.4,0.2]|
-      |         5.4|        3.9|         1.7|        0.4|  2.0|[5.4,3.9,1.7,0.4]|
-      |         4.6|        3.4|         1.4|        0.3|  2.0|[4.6,3.4,1.4,0.3]|
-      |         5.0|        3.4|         1.5|        0.2|  2.0|[5.0,3.4,1.5,0.2]|
-      |         4.4|        2.9|         1.4|        0.2|  2.0|[4.4,2.9,1.4,0.2]|
-      |         4.9|        3.1|         1.5|        0.1|  2.0|[4.9,3.1,1.5,0.1]|
-      |         5.4|        3.7|         1.5|        0.2|  2.0|[5.4,3.7,1.5,0.2]|
-      |         4.8|        3.4|         1.6|        0.2|  2.0|[4.8,3.4,1.6,0.2]|
-      |         4.8|        3.0|         1.4|        0.1|  2.0|[4.8,3.0,1.4,0.1]|
-      |         4.3|        3.0|         1.1|        0.1|  2.0|[4.3,3.0,1.1,0.1]|
-      |         5.8|        4.0|         1.2|        0.2|  2.0|[5.8,4.0,1.2,0.2]|
-      |         5.7|        4.4|         1.5|        0.4|  2.0|[5.7,4.4,1.5,0.4]|
-      |         5.4|        3.9|         1.3|        0.4|  2.0|[5.4,3.9,1.3,0.4]|
-      |         5.1|        3.5|         1.4|        0.3|  2.0|[5.1,3.5,1.4,0.3]|
-      |         5.7|        3.8|         1.7|        0.3|  2.0|[5.7,3.8,1.7,0.3]|
-      |         5.1|        3.8|         1.5|        0.3|  2.0|[5.1,3.8,1.5,0.3]|
-      +------------+-----------+------------+-----------+-----+-----------------+ */
     //Con ayuda de este valor podremos saber los index que tomaron las species
     val labelIndexer = new StringIndexer().setInputCol("label").setOutputCol("indexedLabel").fit(indexed)
     //Mandamos a imprimir
@@ -125,8 +75,6 @@ object Evaluacion2 {
     val splits = data.randomSplit(Array(0.7, 0.3), seed = 1234L)
     val train = splits(0)
     val test = splits(1)
-
-    
     // Se especifican las capas de la red neuronal:
     // El tamaños de nuestra capa de Entrada sera de 4 (caracteristicas), dos capas intermedias
     // una de tamaño 5 y la otra de tamaño 4
