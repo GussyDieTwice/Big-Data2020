@@ -121,27 +121,30 @@ object Evaluacion2 {
 
     //7. Construya el modelos de clasificación y explique su arquitectura.
     
-    // Split the data into train and test
+    // Separamos los datos de Entrenamiento y de Prueba que usaremos
     val splits = data.randomSplit(Array(0.7, 0.3), seed = 1234L)
     val train = splits(0)
     val test = splits(1)
 
-    // specify layers for the neural network:
-    // input layer of size 4 (features), two intermediate of size 5 and 4
-    // and output of size 3 (classes)
+    
+    // Se especifican las capas de la red neuronal:
+    // El tamaños de nuestra capa de Entrada sera de 4 (caracteristicas), dos capas intermedias
+    // una de tamaño 5 y la otra de tamaño 4
+    // y 3 de salida (las clases)
     val layers = Array[Int](4, 5, 4, 3)
 
-    // create the trainer and set its parameters
+    // En el valor trainer establecemos los parametros de entrenamiento
     val trainer = new MultilayerPerceptronClassifier().setLayers(layers).setBlockSize(128).setSeed(1234L).setMaxIter(100)
-    // train the model
+    // Con el valor model Se entrena el modelo
     val model = trainer.fit(train)
 
-    // compute accuracy on the test set
+    // En esta zona calculamos la precision de los datos de prueba
     val result = model.transform(test)
     val predictionAndLabels = result.select("prediction", "label")
     val evaluator = new MulticlassClassificationEvaluator().setMetricName("accuracy")
     
     //8. Imprima los resultados del modelo
+      //Imprimimos nuestra exactitud de nuestro modelo
      println(s"Test set accuracy = ${evaluator.evaluate(predictionAndLabels)}")
 
     spark.stop()
