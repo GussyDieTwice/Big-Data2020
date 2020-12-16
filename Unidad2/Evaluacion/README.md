@@ -249,7 +249,7 @@ which means that it is reliable but there may be other more precise classificati
 
 * https://spark.apache.org/docs/latest/ml-features
 
-
+Video: https://www.youtube.com/watch?v=GShAOwnUB_Q&feature=youtu.be
 
 
 
