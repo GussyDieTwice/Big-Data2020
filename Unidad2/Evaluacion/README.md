@@ -10,6 +10,7 @@ The machine that really learns is an algorithm that reviews data and is capable 
 predicting future behavior. Automatically, also in this context, implies that these systems are
 improved autonomously over time, without human intervention.
 
+![Graphic](https://github.com/CinthiaBV/EXPODM/blob/master/Image/rn.jpg?raw=true)
 
 As described in the Image, MLPC consists of multiple layers of nodes, including the input layer, 
 hidden layers (also called intermediate layers), and output layers. Each layer is completely connected 
@@ -18,6 +19,8 @@ to the next layer in the network. Where the input layer, the intermediate layers
 * The hidden layers are found between the input and output layers and their function depends on those assigned by the 
 input layer to the output layer of a node.
 * The output layer is the final layer of a neural network that returns the result to the user's environment.
+
+![Graphic2](https://austingwalters.com/wp-content/uploads/2018/12/mlp.png)
 
 ## Instructions.
 
@@ -55,7 +58,7 @@ df.columns
 ```
 In this line of code the name of the columns of our csv file is printed.
 Result:
-```scala
+```
 Array[String] = Array(sepal_length, sepal_width, petal_length, petal_width, species)
 ```
 
@@ -67,7 +70,7 @@ df.printSchema
 ```
 With the .printSchema it helps us to know more about our csv file regarding columns.
 Result:
-```scala
+```
     |-- sepal_length: double (nullable = true)
     |-- sepal_width: double (nullable = true)
     |-- petal_length: double (nullable = true)
@@ -97,7 +100,7 @@ df.describe().show()
 The .describe () helps us to know more about our csv in a general way.
 
 Result:
-```scala
+```
 +-------+------------------+-------------------+------------------+------------------+---------+
 |summary|      sepal_length|        sepal_width|      petal_length|       petal_width|  species|
 +-------+------------------+-------------------+------------------+------------------+---------+
@@ -133,7 +136,7 @@ In the data value we alter the indexed value and add the assembler vector as a c
 Finally, the categories are printed both in string and in numerical data.
 
 Result:
-```scala
+```
 +------------+-----------+------------+-----------+-----+
 |sepal_length|sepal_width|petal_length|petal_width|label|
 +------------+-----------+------------+-----------+-----+
@@ -228,7 +231,7 @@ println(s"Test set accuracy = ${evaluator.evaluate(predictionAndLabels)}")
 With println we print our result with a Test set Accuracy comment showing the percentage of our prediction.
 
 Result:
-```scala
+```
 Test set accuracy = 0.95
 ```
 
