@@ -17,36 +17,15 @@ object Evaluacion2 {
     //2.¿Cuáles son los nombres de las columnas?
     val datos = df.columns
     df.columns
-    // sepal_length, sepal_width, petal_length, petal_width, species
-   
     //3. ¿Cómo es el esquema?
     val esquema = df.printSchema
     df.printSchema
-    /*|-- sepal_length: double (nullable = true)
-    |-- sepal_width: double (nullable = true)
-    |-- petal_length: double (nullable = true)
-    |-- petal_width: double (nullable = true)
-    |-- species: string (nullable = true) */
-    //esquema: Unit = ()
-  
     //4.Imprime las primeras 5 columnas.
-    // Array([5.1,3.5,1.4,0.2,setosa], [4.9,3.0,1.4,0.2,setosa], [4.7,3.2,1.3,0.2,setosa], [4.6,3.1,1.5,0.2,setosa], [5.0,3.6,1.4,0.2,setosa])
     val imp = df.head(5)
     df.head(5)
-   
     //5.Usa el metodo describe () para aprender mas sobre los datos del  DataFrame.
     val desc = df.describe().show()
     df.describe().show() 
-    /*
-+-------+------------------+-------------------+------------------+------------------+---------+
-|summary|      sepal_length|        sepal_width|      petal_length|       petal_width|  species|
-+-------+------------------+-------------------+------------------+------------------+---------+
-|  count|               150|                150|               150|               150|      150|
-|   mean| 5.843333333333335| 3.0540000000000007|3.7586666666666693|1.1986666666666672|     null|
-| stddev|0.8280661279778637|0.43359431136217375| 1.764420419952262|0.7631607417008414|     null|
-|    min|               4.3|                2.0|               1.0|               0.1|   setosa|
-|    max|               7.9|                4.4|               6.9|               2.5|virginica|
-+-------+------------------+-------------------+------------------+------------------+---------+ */
 
     //6. Haga la transformación pertinente para los datos categoricos los cuales seran nuestras etiquetas a clasificar.
       //Crear un valor indexer que contendra las species en dentro del label en forma de datos categoricos 
@@ -54,7 +33,6 @@ object Evaluacion2 {
     // En el valor indexed hacemos las tranformacion del DF eliminando Species por la nueva columna "label"
     val indexed = indexer.transform(df).drop("species").withColumnRenamed("indexedLabel", "label")
     indexed.show()
-    
     //El valor assembler es para ensamblar el vector con las columnas sepal_length,sepal_width,pedal_length,pedal_width
     // en una column nueva llamada feature
     val assembler = new VectorAssembler().setInputCols(Array("sepal_length","sepal_width","petal_length","petal_width")).setOutputCol("features")
@@ -70,7 +48,6 @@ object Evaluacion2 {
     //indexedLabels: [1.0, 0.0, 2.0]
 
     //7. Construya el modelos de clasificación y explique su arquitectura.
-    
     // Separamos los datos de Entrenamiento y de Prueba que usaremos
     val splits = data.randomSplit(Array(0.7, 0.3), seed = 1234L)
     val train = splits(0)
