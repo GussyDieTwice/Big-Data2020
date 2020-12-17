@@ -1,4 +1,4 @@
-** Practice 1.
+##Practice 1.
 
 Import LinearRegression
 ```scala
@@ -100,7 +100,7 @@ println(s"objectiveHistory: ${trainingSummary.objectiveHistory.toList}")
 ```
 
 Show the values of residuals, the RMSE, the MSE, and also the R ^ 2.
-``scala
+```scala
 trainingSummary.residuals.show()
 println(s"RMSE: ${trainingSummary.rootMeanSquaredError}")
 println(s"MSE: ${trainingSummary.meanSquaredError}")
@@ -108,7 +108,7 @@ println(s"r2: ${trainingSummary.r2}")
 ```
 
 Result:
-```
+```scala
 root
  |-- Email: string (nullable = true)
  |-- Avatar: string (nullable = true)
