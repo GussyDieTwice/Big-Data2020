@@ -16,6 +16,8 @@ To find out if the data are similar or different, the K-means algorithm uses the
 * If there is regression, it returns the mean of the K labels.
 * If it is classification, return the K tags fashion
 
+![kmeans](https://miro.medium.com/max/1080/1*fz-rjYPPRlGEMdTI-RLbDg.png)
+
 ## Instruction.
 Develop the following instructions in Spark with the Scala programming language.
 
