@@ -40,8 +40,8 @@ object Evaluacion3 {
         val model = kMeans.fit(data)
 
         //11. Evalúe  los grupos utilizando Within Set Sum of Squared Errors WSSSE e imprima los centroides.
-        val WSSSE = model.computeCost(data)
-        println(s"Within Set Sum of Squared Errors = $WSSSE")
+        val error = model.computeCost(data)
+        println(s"Within Set Sum of Squared Errors = $error")
 
         println("Cluster Centers: ")
         model.clusterCenters.foreach(println)
