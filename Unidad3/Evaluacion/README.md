@@ -163,8 +163,8 @@ Solution: The WSSSE is obtained and saved in the error value for printing.
 Also proceed to print the Centroids of the clusters formed by Kmeans. 
 
 ```scala
-val WSSSE = model.computeCost(data)
-println(s"Within Set Sum of Squared Errors = $WSSSE")
+val error = model.computeCost(data)
+println(s"Within Set Sum of Squared Errors = $error")
 
 println("Cluster Centers: ")
 model.clusterCenters.foreach(println)
