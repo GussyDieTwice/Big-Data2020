@@ -184,6 +184,9 @@ Cluster Centers:
 K-Means clustering is a simple but powerful algorithm in data science. There are a lot of real world applications of K-Means clustering. It is a centroid-based algorithm, or a distance-based algorithm, where we calculate distances to assign a point to a group. In K-Means, each group is associated with a centroid.
 It is easy to understand, easy to adapt. It works well with large or small data sets, is efficient and performs well, but requires the user to define the number of clusters.
 As for the practice, it was the simplest of all, since we could see an example of it and only adapt it to the dataset that we were asked for together with the error that we were asked to calculate.
+It was successful when obtaining the centroids of the 5 columns, when running the model in the dataframe we only need 3 iterations according to the results shown to group.
+This could be better explained with a graph if possible.
+
 ## Sources.
 * https://spark.apache.org/docs/2.4.7/ml-clustering.html#k-means
 * https://stackoverflow.com/questions/29161983/apache-spark-mllib-wssse-error 
