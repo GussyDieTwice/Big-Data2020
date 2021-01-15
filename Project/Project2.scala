@@ -8,19 +8,13 @@ import org.apache.spark.sql.SparkSession
 import org.apache.spark.ml.feature.StringIndexer 
 import org.apache.spark.ml.feature.VectorAssembler
 
-object Project2 {
-
-  def main(args: Array[String]): Unit = {
-
         import org.apache.log4j._
         Logger.getLogger("org").setLevel(Level.ERROR)
 
         val t1 = System.nanoTime
 
-        //val spark = SparkSession.builder.getOrCreate()
-        val spark = SparkSession.builder.appName("DecisionTreeClassificationExample").getOrCreate()
+        val spark = SparkSession.builder.getOrCreate()
 
-    
         val df = spark.read.option("header","true").option("inferSchema","true").option("delimiter",";")csv("C:/Principal/Big-Data2020/Project/bank-full.csv")
         df.show()
 
@@ -74,8 +68,7 @@ object Project2 {
         val duration = (System.nanoTime - t1) / 1e9d
         println("Process Duration: " + duration + " seconds")
         
-        spark.stop()
-  }
-}
+       
+
 
 
