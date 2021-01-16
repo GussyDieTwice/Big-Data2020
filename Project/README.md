@@ -160,6 +160,8 @@ Taking into account the previous results, it could be seen that the probability 
 Regarding average time we can see that MLPC is the one that takes the longest to execute and Logistic Regression the least, this does not mean that one is better than another only because of its speed, but it is not a reason to choose one of these techniques, either. although we can take it into account. The correct thing to do would be to take into account what you want to do when doing a study, with that starting and choosing the Machine Learning technique that best suits the objective of the research.
 Leaving all this out, we can see that Logistic Regression is the fastest machine learning method to execute, at least in this research.
 
+Project Video: https://youtu.be/bAc7EJp_Q7U
+
 ## REFERENCE SOURCES
 
 [1] IBM. (June 22, 2020). What is Machine Learning ?. January 14, 2021, from IBM Corporation Website: https://www.ibm.com/mx-es/analytics/machine-learning
