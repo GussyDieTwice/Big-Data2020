@@ -25,12 +25,14 @@ Each layer is completely connected to the next layer in the network. Where the i
 * The hidden layers are found between the input and output layers and their function depends on those assigned by the input layer to the output layer of a node.
 * The output layer is the final layer of a neural network that returns the result to the user's environment.
 
-
+![capaz](https://austingwalters.com/wp-content/uploads/2018/12/mlp.png)
 
 A multilayer perceptron has three distinctive characteristics:
 
 1. The model of each neuron in the network includes a non-linearity in the final output. The important point to emphasize here is that nonlinearity 
 is smooth (that is, differentiable). A commonly used way for nonlinearity to satisfy this requirement is to use a sigmoidal nonlinearity defined by the following function:
+
+yj = 1/1+exp(-vj)
 
 where yj is the output of neuron, and vj is the internal activity level of neuron j. The presence of non-linearities is important because otherwise the 
 input-output relationship of the lattice could be reduced to that of a single-layer perceptron. Furthermore, the use of the function described in has biological motivations.
@@ -47,6 +49,8 @@ A decision tree is a schematic representation that facilitates decision-making b
 as well as the possible consequences that each scenario could bring. Its name is given due to the similarity that the scheme has with the branches of a tree;
 In addition, a decision tree can be used in any aspect of daily life, from difficult decisions in the family, to complex applications in business and artificial intelligence.
 
+![arbol](https://upload.wikimedia.org/wikipedia/commons/0/08/Decision_stream.gif)
+
 Decision trees are especially useful when:
 * The alternatives or courses of action are well defined (for example: accept or reject a proposal, increase production capacity or not, build or not a new warehouse, etc.)
 * The uncertainties can be quantified (for example: probability of success of an advertising campaign, probable effect on sales, probability of passing stages, etc.)
@@ -58,11 +62,15 @@ Support Vector Machine (SVM) is a supervised machine learning algorithm that can
 and the value of each feature is the value of a particular coordinate. Then, we perform the classification by finding the hyperplane that differentiates 
 the two classes very well (see snapshot below) [4].
 
+![svm](https://www.analyticsvidhya.com/wp-content/uploads/2015/10/SVM_1.png)
+
 ## Logistic regression
 
 Logistic regression is the appropriate regression analysis to perform when the dependent variable is dichotomous (binary). Like all regression analyzes, 
 logistic regression is a predictive analysis. Logistic regression is used to describe data and explain the relationship between a
 dependent binary variable and one or more nominal, ordinal, interval, or ratio independent variables [5].
+
+![lg](https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Logistic-curve.svg/320px-Logistic-curve.svg.png)
 
 ## TECHNOLOGIES
 
