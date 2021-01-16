@@ -99,6 +99,7 @@ Although these practices were carried out in a virtual machine, which its specif
 It should be declared that the computer is in the High Performance state, therefore there is no limitation when using the hardware.
 
 * SVM.
+
 |   	| Time  	| Accuracy 	| Error 	|
 |---	|-------	|----------	|-------	|
 | 1 	| 24.96 	| 0.88     	| 0.11  	|
@@ -108,6 +109,7 @@ It should be declared that the computer is in the High Performance state, theref
 | 5 	| 12.96 	| 0.88     	| 0.11  	|
 
 * Decision Tree.
+
 |   	| Time  	| Accuracy 	| Error 	|
 |---	|-------	|----------	|-------	|
 | 1 	| 19.74 	| 0.88     	| 0.10  	|
@@ -116,7 +118,8 @@ It should be declared that the computer is in the High Performance state, theref
 | 4 	| 10.61 	| 0.89     	| 0.10  	|
 | 5 	| 10.95 	| 0.89     	| 0.10  	|
 
-* Logistic Regression
+* Logistic Regression.
+
 |   	| Time  	| Accuracy 	| Error 	|
 |---	|-------	|----------	|-------	|
 | 1 	| 17.04 	| 0.88     	| 0.11  	|
@@ -126,6 +129,7 @@ It should be declared that the computer is in the High Performance state, theref
 | 5 	| 7.26  	| 0.88     	| 0.11  	|
 
 * MLPC.
+
 |   	| Time  	| Accuracy 	| Error 	|
 |---	|-------	|----------	|-------	|
 | 1 	| 20.07 	| 0.88     	| 0.11  	|
@@ -135,6 +139,7 @@ It should be declared that the computer is in the High Performance state, theref
 | 5 	| 19.72 	| 0.88     	| 0.11  	|
 
 * Average.
+
 | Algorithm 	| Time      	| Accuracy 	| Error 	|
 |-----------	|-----------	|----------	|-------	|
 | SVM       	| 15.67 sec 	| 88%      	| 11%   	|
