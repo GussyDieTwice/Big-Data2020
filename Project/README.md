@@ -52,3 +52,45 @@ Decision trees are especially useful when:
 * The uncertainties can be quantified (for example: probability of success of an advertising campaign, probable effect on sales, probability of passing stages, etc.)
 * The objectives are clear (for example: increase sales, maximize profits, minimize costs, etc.) [3].
 
+## Support Vector Machines
+
+Support Vector Machine (SVM) is a supervised machine learning algorithm that can be used for classification or regression challenges. However, it is mainly used in classification problems. In the SVM algorithm, we plot each data item as a point in n-dimensional space (where n is the number of features it has)
+and the value of each feature is the value of a particular coordinate. Then, we perform the classification by finding the hyperplane that differentiates 
+the two classes very well (see snapshot below) [4].
+
+## Logistic regression
+
+Logistic regression is the appropriate regression analysis to perform when the dependent variable is dichotomous (binary). Like all regression analyzes, 
+logistic regression is a predictive analysis. Logistic regression is used to describe data and explain the relationship between a
+dependent binary variable and one or more nominal, ordinal, interval, or ratio independent variables [5].
+
+## TECHNOLOGIES
+
+* Scala
+
+Scala is a modern multi-paradigm programming language designed to express common programming patterns in a concise, elegant, and securely typed way. 
+Easily integrate features of functional and object-oriented languages.
+
+* Spark
+
+Apache Spark is a distributed data processing programming framework designed to be fast and general-purpose. As its name suggests, 
+it has been developed within the framework of the Apache project, which guarantees its Open Source license.
+In addition, we can count on its maintenance and evolution to be carried out by highly prestigious work groups, and there will be great flexibility and interconnection with other Apache modules such as Hadoop, Hive or Kafka.
+Part of the essence of Spark is its general character. It consists of different APIs and modules that allow it to be used by a wide variety of professionals at all stages of the data life cycle.
+These stages can include from support for interactive data analysis with SQL to the creation of complex pipelines of machine learning and streaming processing, all using the same processing engine and the same APIs.
+
+## REFERENCE SOURCES
+
+[1] IBM. (June 22, 2020). What is Machine Learning ?. January 14, 2021, from IBM Corporation Website: https://www.ibm.com/mx-es/analytics/machine-learning
+
+[2] Francisco J. Palacios Burgos .. (February 21, 2017). The multilayer perceptron (MLP). January 15, 2021, from ibiblio.org Website: https://www.ibiblio.org/pub/linux/docs/LuCaS/Presentaciones/200304curso-glisa/redes_neuronales/curso-glisa-redes_neuronales-html/x105.html
+
+[3] Jorge Montiel Romero. (February 13, 2020). What are and how to make decision trees? January 14, 2021, from Profesionalistar.org Website: https://profesionistas.org.mx/que-son-y-como-hacer-arboles-de-decisiones/
+
+[4] Sunil Ray. (September 13, 2017). Understand the Support Vector Machine (SVM) algorithm. January 15, 2021, from AnalyticsVidhya Website: https://www.analyticsvidhya.com/blog/2017/09/understaing-support-vector-machine-example-code/
+
+[5] StatisticSolution. (-). What is Logistic Regression ?. January 15, 2021, from statisticssolution Website: https://www.statisticssolutions.com/what-is-logistic-regression/
+
+[6] Scala. (-). Introduction Scala. January 15, 2021, from Scala Website: https://docs.scala-lang.org/es/tour/tour-of-scala.html#:~:text=Scala%20es%20un%20lenguaje%20de, oriented% 20 to% 20 functional objects% 20 and% 20.
+
+[7] ESIC BUSINESS & MARKETING SCHOOL. (October 20, 2020). Apache Spark. January 15, 2021, from ESIC Website: https://www.esic.edu/rethink/tecnologia/apache-spark-introduccion-que-es-y-como-funciona
