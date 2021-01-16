@@ -1,3 +1,4 @@
+//Support Vector Machine
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.ml.feature.{VectorAssembler, StringIndexer, VectorIndexer, OneHotEncoder}
 import org.apache.spark.ml.classification.MultilayerPerceptronClassifier

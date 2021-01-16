@@ -1,12 +1,10 @@
+//Perceptron
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.ml.feature.StringIndexer
 import org.apache.spark.ml.feature.VectorAssembler
 import org.apache.spark.ml.classification.MultilayerPerceptronClassifier
 import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
-
-object Project4 {
-
-  def main(args: Array[String]): Unit = {      
+     
         
         import org.apache.log4j._
         Logger.getLogger("org").setLevel(Level.ERROR)
@@ -46,10 +44,7 @@ object Project4 {
         val evaluator = new MulticlassClassificationEvaluator().setMetricName("accuracy")
     
         println(s"Test set accuracy = ${evaluator.evaluate(predictionAndLabels)}")
-
+        println(s"Test Error = ${(1.0 - metrics.accuracy)}")
         val duration = (System.nanoTime - t1) / 1e9d
         println("Process Duration: " + duration + " seconds")
 
-        spark.stop()
-  }
-}

@@ -1,9 +1,11 @@
+//Logistic Regression
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.ml.feature.StringIndexer
 import org.apache.spark.ml.feature.VectorAssembler
 import org.apache.spark.ml.classification.LogisticRegression
 import org.apache.spark.ml.classification.MultilayerPerceptronClassifier
 import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
+import org.apache.spark.mllib.evaluation.MulticlassMetrics
             
         import org.apache.log4j._
         Logger.getLogger("org").setLevel(Level.ERROR)
@@ -13,7 +15,7 @@ import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
         val spark = SparkSession.builder().getOrCreate()
 
 
-        val df = spark.read.option("header","true").option("inferSchema", "true").option("delimiter",";").format("csv").load("C:/Principal/Big-Data2020/Project/bank-full.csv")
+        val df = spark.read.option("header","true").option("inferSchema","true").option("delimiter",";")csv("C:/Principal/Big-Data2020/Project/bank-full.csv")
         df.show()
         val indexer = new StringIndexer().setInputCol("y").setOutputCol("indexedLabel").fit(df)
         val indexed = indexer.transform(df).drop("y").withColumnRenamed("indexedLabel", "label")
