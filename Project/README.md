@@ -79,6 +79,74 @@ In addition, we can count on its maintenance and evolution to be carried out by 
 Part of the essence of Spark is its general character. It consists of different APIs and modules that allow it to be used by a wide variety of professionals at all stages of the data life cycle.
 These stages can include from support for interactive data analysis with SQL to the creation of complex pipelines of machine learning and streaming processing, all using the same processing engine and the same APIs.
 
+## RESULTS
+A program run was carried out with the algorithms, the accuracy of their performance cannot always be tested with just one run, so we set the objective of performing 5 of them and comparing them.
+For this comparison we take into account the time it takes to execute the entire program, the accuracy of the algorithm and the probability of error it has.
+
+The specifications of the equipment where the executions were carried out are:
+* CPU: Intel Core i7 7700 3.60 GHz 4 cores 8 threads.
+* RAM: Kingston HyperX 16 GB 2133 Mhz DDR4.
+* HDD: WD Blue HDD 1TB 3.5 "7200RPM.
+* SSD: Kingstone SSD 480GB 2.5 ".
+* OS: Windows 10 Home.
+
+Although these practices were carried out in a virtual machine, which its specifications were:
+* OS: Ubuntu 20.04.1 LTS.
+* RAM: 8GB 2133 Mhz.
+* HDD: 7200 RPM.
+* CPU: 3.60 Ghz 4 cores 8 threads.
+
+It should be declared that the computer is in the High Performance state, therefore there is no limitation when using the hardware.
+
+* SVM.
+|   	| Time  	| Accuracy 	| Error 	|
+|---	|-------	|----------	|-------	|
+| 1 	| 24.96 	| 0.88     	| 0.11  	|
+| 2 	| 13.76 	| 0.88     	| 0.11  	|
+| 3 	| 13.53 	| 0.88     	| 0.11  	|
+| 4 	| 13.16 	| 0.88     	| 0.11  	|
+| 5 	| 12.96 	| 0.88     	| 0.11  	|
+
+* Decision Tree.
+|   	| Time  	| Accuracy 	| Error 	|
+|---	|-------	|----------	|-------	|
+| 1 	| 19.74 	| 0.88     	| 0.10  	|
+| 2 	| 11.24 	| 0.88     	| 0.10  	|
+| 3 	| 10.77 	| 0.88     	| 0.10  	|
+| 4 	| 10.61 	| 0.89     	| 0.10  	|
+| 5 	| 10.95 	| 0.89     	| 0.10  	|
+
+* Logistic Regression
+|   	| Time  	| Accuracy 	| Error 	|
+|---	|-------	|----------	|-------	|
+| 1 	| 17.04 	| 0.88     	| 0.11  	|
+| 2 	| 8.31  	| 0.88     	| 0.11  	|
+| 3 	| 7.93  	| 0.88     	| 0.11  	|
+| 4 	| 7.32  	| 0.88     	| 0.11  	|
+| 5 	| 7.26  	| 0.88     	| 0.11  	|
+
+* MLPC.
+|   	| Time  	| Accuracy 	| Error 	|
+|---	|-------	|----------	|-------	|
+| 1 	| 20.07 	| 0.88     	| 0.11  	|
+| 2 	| 19.32 	| 0.88     	| 0.11  	|
+| 3 	| 18.64 	| 0.88     	| 0.11  	|
+| 4 	| 19.29 	| 0.88     	| 0.11  	|
+| 5 	| 19.72 	| 0.88     	| 0.11  	|
+
+* Average.
+| Algorithm 	| Time      	| Accuracy 	| Error 	|
+|-----------	|-----------	|----------	|-------	|
+| SVM       	| 15.67 sec 	| 88%      	| 11%   	|
+| Dec.Th    	| 12.66 sec 	| 88%      	| 11%   	|
+| Log.Reg   	|  9.57 sec 	| 88%      	| 11%   	|
+| MLPC      	| 19,40 sec 	| 88%      	| 11%   	|
+
+## CONCLUSION
+Taking into account the previous results, it could be seen that the probability of accuracy and error is similar in all the algorithms, the running time of these is what varied, being the first time to execute the one that takes the longest, and decreasing each time.
+Regarding average time we can see that MLPC is the one that takes the longest to execute and Logistic Regression the least, this does not mean that one is better than another only because of its speed, but it is not a reason to choose one of these techniques, either. although we can take it into account. The correct thing to do would be to take into account what you want to do when doing a study, with that starting and choosing the Machine Learning technique that best suits the objective of the research.
+Leaving all this out, we can see that Logistic Regression is the fastest machine learning method to execute, at least in this research.
+
 ## REFERENCE SOURCES
 
 [1] IBM. (June 22, 2020). What is Machine Learning ?. January 14, 2021, from IBM Corporation Website: https://www.ibm.com/mx-es/analytics/machine-learning
